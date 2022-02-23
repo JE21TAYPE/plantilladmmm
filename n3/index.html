@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAURANTE | LIMA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home">
+
+    <!-- ================== -->
+    <!-- ==MENU DE NAV ==== -->
+    <!-- ================== -->
+    <nav class="nav__container">
+        <div class="logo">
+            <a href="index.html">TAYPE</a>
+        </div>
+
+        <input type="checkbox" name="menu" id="main">
+        <label for="main" class="icon"><i class="fa-solid fa-bars"></i>
+        </label>
+
+        <ul class="nav__items">
+            <li class="items__container">
+                <a href="#home" class="item-link">Inicio</a>
+            </li>
+            <li class="items__container">
+                <a href="#locatorios" class="item-link">Locatorios</a>
+            </li>
+            <li class="items__container">
+                <a href="#nosotros" class="item-link">Nosotros</a>
+            </li>
+            <li class="items__container">
+                <a href="#map" class="item-link">Visitenos</a>
+            </li>
+            <li class="items__container">
+                <a href="#footer" class="item-link">Reservar</a>
+            </li>
+        </ul>
+
+        <div class="nav2">
+            <a href="#home" class="active">Inicio</a>
+            <a href="#locatorios">Locatorios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#map">Visitenos</a>
+            <a href="#footer">Reservar</a>
+        </div>
+    </nav>
+
+    <!-- ================== -->
+    <!-- ==REDES SOCIALES== -->
+    <!-- ================== -->
+
+    <aside class="red__container">
+        <a href="#" class="red__item">
+            <i class="fa-brands fa-facebook-square"></i>
+        </a>
+
+        <a href="#" class="red__item">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </aside>
+
+    <!-- ================== -->
+    <!-- ===SLIDE COMIDAS== -->
+    <!-- ================== -->
+    <section class="bg__foods">
+
+    </section>
+
+    <!-- ================== -->
+    <!-- ==== COMIDAS ===== -->
+    <!-- ================== -->
+
+    <section class="locations" id="locatorios">
+        <h2>LOCATORIOS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quidem nostrum, officia porro sed eius quos,
+            quam voluptatibus voluptates tempora inventore perferendis numquam modi! Ipsum nisi, accusantium rerum
+            eveniet quis, impedit vel quam itaque officia porro animi aperiam adipisci voluptates eum illum assumenda
+            harum delectus eius? Dolore maiores eligendi vero itaque debitis modi accusantium quos, in atque beatae
+            obcaecati hic?</p>
+        <div class="foods__container">
+            <img src="./img/aji.jpg" alt="">
+            <img src="./img/chiken.jpg" alt="">
+            <img src="./img/eggs.jpg" alt="">
+            <img src="./img/pasta.jpg" alt="">
+            <img src="./img/sop.jpg" alt="">
+            <img src="./img/spaguetti.jpg" alt="">
+        </div>
+        <div class="container__cart">
+            <a download="" href="" class="carts">descargar carta</a>
+        </div>
+    </section>
+
+    <!-- ================== -->
+    <!-- =====NOSOTROS===== -->
+    <!-- ================== -->
+
+    <section class="we__information" id="nosotros">
+        <h2>NOSOTROS</h2>
+        <img src="./img/we.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas repellat laudantium corporis aliquid
+            nesciunt quis fugiat, perspiciatis itaque praesentium error deleniti sequi alias, expedita aperiam debitis
+            impedit voluptatibus nihil illum?</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas quo itaque recusandae accusamus, possimus obcaecati consequuntur architecto! Similique porro sapiente voluptatum atque iste quia quam. Atque cupiditate magni odio quidem?</p>
+    </section>
+
+    <section id="map">
+
+        <iframe  loading="lazy" allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD1bvawmUNO3w9L1496mlQv9SkqTRp70Vw&q=Space+Needle,Seattle+WA">
+        </iframe>
+        <div>
+            <h2>VISITENOS</h2>
+            <img src="./4709988.jpg" class="img__map" alt="">
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="horario">
+            <h2>Horario</h2>
+            <dl>
+                <dt>lunes a viernes</dt>
+                <dd>8pm a 6pm</dd>
+                <br>
+                <dt>sabado a domingo</dt>
+                <dd>8pm a 10pm</dd>
+            </dl>
+        </div>
+
+        <div class="dir">
+            <h2>DIRECCIÓN</h2>
+            <p>av. 3 ositos - LIMA</p>
+        </div>
+
+        <div class="tel">
+            <h2>CONTACTO</h2>
+            <p>tel: +51 935747422</p>
+        </div>
+
+        <div class="container__reseved">
+            <a href="" class="reserved">RESERVAR</a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("nav");
+            header.classList.toggle("down", window.scrollY > 0);
+        });
+
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("ul");
+            header.classList.toggle("down-menu", window.scrollY > 0);
+        });
+    </script>
+
+</body>
+
+</html>

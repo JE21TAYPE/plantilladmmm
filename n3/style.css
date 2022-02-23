@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;400;600&display=swap');
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.locations,
+.we__information,
+.map,
+.footer {
+    scroll-margin-top: 4.5rem;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Serif', sans-serif;
+    margin: 0;
+}
+
+#main,
+.nav2,
+.img__map {
+    display: none;
+}
+
+.nav__items {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(4, 32, 77);
+    top: 80px;
+    left: -100%;
+    transition: all .999s;
+}
+
+.items__container {
+    list-style: none;
+}
+
+.items__container:hover {
+    background-color: rgba(0 0 0 / .5);
+}
+
+.item-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    display: block;
+    padding: 12px;
+}
+
+.nav__container {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background-color: rgba(0 0 0 / .5);
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 800;
+}
+
+.icon i {
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.icon i:hover {
+    background-color: rgba(0 0 0 / .7);
+    border-radius: 4px;
+}
+
+
+.down {
+    background-color: #136776;
+    height: 60px;
+    transition: all 1s;
+}
+
+#main:checked~.nav__items {
+    left: 0;
+    transition: all .999s;
+}
+
+.down-menu {
+    top: 60px;
+}
+
+/* slide */
+
+.bg__foods {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./img/slide/img1.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    animation: slide 30s infinite linear;
+    background-attachment: fixed;
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('./img/slide/img1.jpg');
+    }
+
+    33% {
+        background-image: url('./img/slide/img1.jpg');
+    }
+
+    34% {
+        background-image: url('./img/slide/slide1.jpg');
+    }
+
+    69% {
+        background-image: url('./img/slide/slide1.jpg');
+    }
+
+    70% {
+        background-image: url('./img/slide/slide2.jpg');
+    }
+
+    100% {
+        background-image: url('./img/slide/slide2.jpg');
+    }
+}
+
+
+/* reds */
+.red__container {
+    position: fixed;
+    background-color: rgb(4, 32, 77);
+    top: calc(50vh - 80px);
+    width: 50px;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.red__item i {
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 6px;
+}
+
+.red__item i:hover {
+    background-color: rgba(0 0 0 / .5);
+    border-radius: 5px;
+}
+
+/* locations */
+
+h2 {
+    text-align: center;
+}
+
+.locations {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.foods__container {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    margin-top: 1rem;
+}
+
+.foods__container img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+.container__cart {
+    text-align: center;
+    margin-top: 1.5rem;
+    height: 2.5rem;
+}
+
+.locations p {
+    margin: 10px auto;
+    width: 80%;
+}
+
+.carts {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px;
+    background-color: rgb(18, 218, 236);
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    border: thin solid #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(18, 218, 236);
+}
+
+.carts:hover {
+    border: thin solid #000;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgb(5, 72, 78);
+    box-shadow: 5px 5px rgb(5, 72, 78);
+}
+
+/* nosotros */
+.we__information {
+    margin-top: 1.3rem;
+    height: calc(100vh - 60px);
+}
+
+.we__information img {
+    margin-top: .6rem;
+    width: 100%;
+    height: 50vh;
+}
+
+.we__information p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* visitanos */
+
+#map {
+    height: calc(100vh - 60px);
+    margin-top: 1rem;
+    width: 100%;
+    padding: 10px;
+    padding-top: 5rem;
+}
+
+#map iframe {
+    width: 100%;
+    height: 80%;
+}
+
+#map h2 {
+    margin-top: 2rem;
+}
+
+/* footer */
+
+.footer {
+    margin-top: 1.5rem;
+    background-color: #136776;
+    text-align: center;
+}
+
+.footer h2,
+.footer p {
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.footer h2 {
+    border-bottom: medium dashed #fff;
+}
+
+.footer dt,
+.footer dd {
+    color: #fff;
+    padding: .5rem 0;
+}
+
+.container__reseved {
+    margin-top: .5rem;
+    height: 4rem;
+}
+
+.reserved {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px;
+    background-color: #136776;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    border: thin solid #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px #42909e;
+}
+
+.reserved:hover {
+    border: thin solid #000;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgb(5, 72, 78);
+    box-shadow: 5px 5px rgb(5, 72, 78);
+}
+
+/* DISPOSITIVOS TABLET */
+
+@media screen and (min-width : 768px) {
+    .foods__container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+
+    .foods__container img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    #map {
+        margin-top: 1rem;
+        width: 100%;
+        padding: 10px;
+        padding-top: 5rem;
+        height: 500px;
+    }
+
+    #map iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* PARA DESKTOP */
+@media screen and (min-width : 900px) {
+
+    body {
+        /* max-width: 1024px; */
+        margin: auto;
+    }
+
+    #main,
+    .icon {
+        display: none;
+    }
+
+    .nav__container {
+        /* max-width: 1024px; */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__items {
+        display: none;
+    }
+
+    .nav2 {
+        display: block;
+    }
+
+    .nav2 a {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        border-left: medium solid #fff;
+        padding: 6px;
+        margin-right: 5px;
+    }
+
+    .nav2 .active {
+        border: none;
+        border-radius: 4px;
+        background-color: rgba(2 2 2 / .5);
+    }
+
+
+    .we__information img,
+    .we__information p {
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+    .we__information p {
+        margin-top: 1rem;
+    }
+
+    .foods__container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+
+    .foods__container img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .footer {
+        padding: 40px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 60px;
+    }
+
+    #map div {
+        width: 30%;
+        height: 100%;
+    }
+
+    .img__map {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    #map {
+        display: flex;
+        margin-bottom: 3.5rem;
+        width: 100%;
+        height: calc(100vh - 50px);
+        padding: 10px;
+        padding-top: 5rem;
+        justify-content: space-evenly;
+    }
+
+    #map iframe {
+        width: 30%;
+        height: 100%;
+        border: 3px solid #000;
+    }
+
+    #map div {
+        order: -1;
+    }
+}
